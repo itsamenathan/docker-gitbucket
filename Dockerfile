@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:trusty
 
 MAINTAINER Nathan W. <nathan@frcv.net>
 
@@ -6,7 +6,7 @@ RUN apt-get update
 RUN apt-get install -q -y openjdk-7-jre-headless
 RUN apt-get clean
 
-ADD https://github.com/takezoe/gitbucket/releases/download/2.2.1/gitbucket.war /opt/gitbucket.war
+ADD https://github.com/takezoe/gitbucket/releases/download/2.5/gitbucket.war /opt/gitbucket.war
 
 RUN ln -s /gitbucket /root/.gitbucket
 
