@@ -6,7 +6,8 @@ RUN apt-get update
 RUN apt-get install -q -y openjdk-7-jre-headless
 RUN apt-get clean
 
-ADD https://github.com/takezoe/gitbucket/releases/download/2.5/gitbucket.war /opt/gitbucket.war
+ENV VER 2.6
+ADD https://github.com/takezoe/gitbucket/releases/download/$VER/gitbucket.war /opt/gitbucket.war
 
 RUN ln -s /gitbucket /root/.gitbucket
 
