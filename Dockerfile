@@ -1,10 +1,13 @@
-FROM ubuntu:trusty
+FROM debian:wheezy
 
 MAINTAINER Nathan W. <nathan@frcv.net>
 
-RUN apt-get update
-RUN apt-get install -q -y openjdk-7-jre-headless
-RUN apt-get clean
+RUN apt-get --quiet --yes update && \ 
+    apt-get --quiet --yes install \
+      openjdk-7-jre-headless \
+      && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists
 
 ENV VER 2.6
 ADD https://github.com/takezoe/gitbucket/releases/download/$VER/gitbucket.war /opt/gitbucket.war
@@ -15,4 +18,4 @@ VOLUME /gitbucket
 
 EXPOSE 8080 29418
 
-CMD ["/usr/bin/java", "-Duser.timezone=America/Chicago", "-jar", "/opt/gitbucket.war"]
+CMD ["/usr/bin/java", "-jar", "/opt/gitbucket.war"]
