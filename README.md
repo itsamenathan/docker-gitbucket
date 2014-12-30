@@ -18,9 +18,9 @@ This docker image will setup a container with [gitbucket](https://github.com/tak
 docker run -d -p 8080:8080 -p 29418:29418 -v ${PWD}/gitbucket-data:/gitbucket -e "TZ=America/Chicago" itsamenathan/gitbucket
 ```
 
-You can see gitbucket running on http://localhost:8080/
-You can connect via ssh ssh://user@host:29418/repo
-Login: root/root
+* You can see gitbucket running on http://localhost:8080/
+* You can connect via ssh ssh://user@host:29418/repo
+* Login: root/root
 
 ## Building
 
