@@ -20,13 +20,14 @@ docker run -d -p 8080:8080 -p 29418:29418 -v ${PWD}/gitbucket-data:/gitbucket -e
 
 You can see gitbucket running on http://localhost:8080/
 You can connect via ssh ssh://user@host:29418/repo
+Login: root/root
 
 ## Building
 
 To build the image, do the following:
 
 ```
-docker build -t itsamenathan/gitbucket
+docker build -t itsamenathan/gitbucket .
 ```
 
 ## Thanks
