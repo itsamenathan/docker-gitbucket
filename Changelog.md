@@ -1,3 +1,6 @@
+## 3.8 (release date: 2015-10-31)
+ * Updated [gitbucket](https://github.com/takezoe/gitbucket) to version 3.8
+
 ## 3.7 (release date: 2015-10-07)
  * Updated [gitbucket](https://github.com/takezoe/gitbucket) to version 3.7
 

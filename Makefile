@@ -1,5 +1,5 @@
 NAME = itsamenathan/gitbucket
-VERSION = 3.7
+VERSION = 3.8
 
 .PHONY: all build test tag_latest release ssh
 

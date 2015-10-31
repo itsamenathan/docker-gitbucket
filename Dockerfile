@@ -9,7 +9,7 @@ RUN apt-get --quiet --yes update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists
 
-ENV VER 3.7
+ENV VER 3.8
 ADD https://github.com/takezoe/gitbucket/releases/download/$VER/gitbucket.war /opt/gitbucket.war
 
 RUN ln -s /gitbucket /root/.gitbucket
